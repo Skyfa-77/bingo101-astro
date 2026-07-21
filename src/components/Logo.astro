@@ -1,0 +1,15 @@
+---
+// src/components/Logo.astro
+
+export interface Props {
+    src: string;
+    alt?: string;
+    width?: number;
+}
+
+const { src, alt = 'Logo', width = 150 } = Astro.props;
+---
+
+<div class="logo-wrapper">
+    <img src={src} alt={alt} width={width} height="auto" />
+</div>

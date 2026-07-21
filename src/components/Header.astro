@@ -1,0 +1,27 @@
+---
+// src/components/Header.astro
+
+export interface Props {
+    affiliateLink: string;
+    buttons: {
+        login: string;
+        register: string;
+    };
+    target?: string;
+}
+
+const { affiliateLink, buttons, target = '_blank' } = Astro.props;
+---
+
+<header class="site-header">
+    <div class="header-top">
+        <div class="header-actions">
+            <a href={affiliateLink} target={target} class="btn-login">
+                {buttons.login}
+            </a>
+            <a href={affiliateLink} target={target} class="btn-register">
+                {buttons.register}
+            </a>
+        </div>
+    </div>
+</header>

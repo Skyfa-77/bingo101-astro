@@ -1,0 +1,21 @@
+{
+    "name": "Bingo 101",
+    "short_name": "Bingo101",
+    "description": "Play Bingo & Win Real Cash",
+    "start_url": "/?source=pwa",
+    "display": "standalone",
+    "theme_color": "#44b357",
+    "background_color": "#0a0a0a",
+    "icons": [
+        {
+            "src": "icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

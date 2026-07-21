@@ -1,0 +1,54 @@
+---
+// src/layouts/BaseLayout.astro
+
+export interface Props {
+    title?: string;
+    description?: string;
+    canonical?: string;
+    ogImage?: string;
+    themeColor?: string;
+}
+
+const { 
+    title = "Bingo 101 — Game Download",
+    description = "Download Bingo 101 APK and get 50-500 signup bonus instantly.",
+    canonical = "",
+    ogImage = "/images/og-default.jpg",
+    themeColor = "#44b357"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    {canonical && <link rel="canonical" href={canonical} />}
+
+    <!-- ===== PWA ===== -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content={themeColor} />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+
+    <!-- ===== СТИЛИ ===== -->
+    <link rel="stylesheet" href="/styles/global.css" />
+
+    <!-- ===== СКРИПТЫ ===== -->
+    <script src="/app.js" is:inline></script>
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+    {canonical && <meta property="og:url" content={canonical} />}
+</head>
+<body>
+    <div class="container">
+        <slot />
+    </div>
+</body>
+</html>

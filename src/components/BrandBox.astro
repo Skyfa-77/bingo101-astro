@@ -1,0 +1,25 @@
+---
+// src/components/BrandBox.astro
+
+import DownloadButton from './DownloadButton.astro';
+import Bonuses from './Bonuses.astro';
+
+export interface Props {
+    buttons: {
+        download: string;
+        downloadFull?: string;
+    };
+    bonuses: {
+        welcome: string;
+        freeBets: string;
+        subtitle: string;
+    };
+}
+
+const { buttons, bonuses } = Astro.props;
+---
+
+<div class="brand-box">
+    <DownloadButton text={buttons.downloadFull || buttons.download} full={true} />
+    <Bonuses welcome={bonuses.welcome} freeBets={bonuses.freeBets} subtitle={bonuses.subtitle} />
+</div>

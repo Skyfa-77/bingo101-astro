@@ -1,0 +1,212 @@
+---
+// src/pages/index.astro
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Logo from '../components/Logo.astro';
+import BrandTitle from '../components/BrandTitle.astro';
+import AppInfo from '../components/AppInfo.astro';
+import BrandBox from '../components/BrandBox.astro';
+
+import brand from '../config/brand.js';
+import content from '../content/brand-text.json';
+
+const data = {
+    ...brand,
+    ...content,
+};
+---
+
+<BaseLayout seo={data.seo} themeColor={data.pwa.themeColor}>
+
+    <Header 
+        affiliateLink={data.affiliate.link}
+        buttons={data.buttons}
+        target={data.affiliate.target}
+    />
+
+    <Logo src={data.brand.logo} alt={data.brand.name} />
+
+    <BrandTitle name={data.brand.name} />
+
+    <AppInfo 
+        rating={data.appInfo.rating}
+        size={data.appInfo.size}
+        votes={data.appInfo.votes}
+        bonus={data.appInfo.bonus}
+    />
+
+    <BrandBox 
+        buttons={data.buttons}
+        bonuses={data.bonuses}
+    />
+
+    <!-- ===== DIVIDER ===== -->
+    <hr class="section-divider" />
+
+    <!-- ===== HERO ===== -->
+    <h2>{data.hero.title}</h2>
+    <p>{data.hero.text}</p>
+
+    <!-- ===== IMAGE PLACEHOLDER ===== -->
+    <div class="img-placeholder">
+        <a href={data.affiliate.link} target={data.affiliate.target}>
+            <img src="/images/gr4.webp" alt="Bingo 101 Platform Interface" />
+        </a>
+        <span class="label">Illustration for informational purposes only</span>
+    </div>
+
+    <!-- ===== SECTION 1: REGISTRATION ===== -->
+    <h2>How to <span class="highlight">Register</span> on Bingo 101</h2>
+    <p>According to open sources, Bingo 101 offers several ways to create an account. Based on player reviews, the registration process includes the following steps:</p>
+    <ul>
+        {data.sections.registration.steps.map(step => (
+            <li><strong>{step}</strong></li>
+        ))}
+    </ul>
+    <div class="info-box">
+        <p><strong>Important:</strong> {data.sections.registration.important}</p>
+    </div>
+
+    <!-- ===== EXTRA DOWNLOAD BUTTON ===== -->
+    <BrandBox buttons={data.buttons} bonuses={data.bonuses} />
+
+    <!-- ===== SECTION 2: ADVANTAGES ===== -->
+    <h2>Advantages of <span class="highlight">Bingo 101</span></h2>
+    <p>Analyzing player reviews and information from open sources, the following features of the bookmaker Bingo 101 can be highlighted:</p>
+    <ul>
+        {data.sections.advantages.items.map(item => (
+            <li><strong>{item}</strong></li>
+        ))}
+    </ul>
+
+    <!-- ===== SECTION 3: LICENSE ===== -->
+    <h2>License &amp; <span class="highlight">Security</span></h2>
+    <p>{data.sections.license.text}</p>
+    <p>Security measures mentioned on various review sites include:</p>
+    <ul>
+        {data.sections.license.measures.map(measure => (
+            <li><strong>{measure}</strong></li>
+        ))}
+    </ul>
+    <div class="warning-box">
+        <p><strong>Important:</strong> {data.sections.license.important}</p>
+    </div>
+
+    <!-- ===== EXTRA DOWNLOAD BUTTON ===== -->
+    <BrandBox buttons={data.buttons} bonuses={data.bonuses} />
+
+    <!-- ===== SECTION 4: PAYMENTS ===== -->
+    <h2>Financial <span class="highlight">Operations</span></h2>
+    <h3>Deposit Methods</h3>
+    <ul>
+        {data.sections.payments.depositMethods.map(method => (
+            <li><strong>{method}</strong></li>
+        ))}
+    </ul>
+    <h3>Withdrawal Information</h3>
+    <p>{data.sections.payments.withdrawal}</p>
+    <div class="info-box">
+        <p><strong>Note:</strong> {data.sections.payments.note}</p>
+    </div>
+
+    <!-- ===== SECTION 5: BONUSES ===== -->
+    <h2>Bonus <span class="highlight">Program</span></h2>
+    <p>Based on open sources, Bingo 101 offers various types of bonuses and promotions:</p>
+    <ul>
+        {data.sections.bonuses.items.map(item => (
+            <li><strong>{item}</strong></li>
+        ))}
+    </ul>
+    <div class="warning-box">
+        <p>{data.sections.bonuses.note}</p>
+    </div>
+
+    <!-- ===== EXTRA DOWNLOAD BUTTON ===== -->
+    <BrandBox buttons={data.buttons} bonuses={data.bonuses} />
+
+    <!-- ===== SECTION 6: SPORTS ===== -->
+    <h2>Sports <span class="highlight">Line</span></h2>
+    <p>According to various reviews, Bingo 101 offers betting on a wide range of sports disciplines:</p>
+    <ul>
+        {data.sections.sports.disciplines.map(discipline => (
+            <li><strong>{discipline}</strong></li>
+        ))}
+    </ul>
+    <h3>Types of Bets</h3>
+    <ul>
+        {data.sections.sports.betTypes.map(bet => (
+            <li><strong>{bet}</strong></li>
+        ))}
+    </ul>
+
+    <!-- ===== SECTION 7: MOBILE ===== -->
+    <h2>Mobile <span class="highlight">Solutions</span></h2>
+    <p>According to open sources, Bingo 101 offers mobile solutions for different operating systems:</p>
+    <ul>
+        {data.sections.mobile.items.map(item => (
+            <li><strong>{item}</strong></li>
+        ))}
+    </ul>
+    <div class="info-box">
+        <p>{data.sections.mobile.note}</p>
+    </div>
+
+    <!-- ===== EXTRA DOWNLOAD BUTTON ===== -->
+    <BrandBox buttons={data.buttons} bonuses={data.bonuses} />
+
+    <!-- ===== SECTION 8: SUPPORT ===== -->
+    <h2>Support <span class="highlight">Service</span></h2>
+    <p>According to open sources, Bingo 101 provides the following support channels:</p>
+    <ul>
+        {data.sections.support.channels.map(channel => (
+            <li><strong>{channel}</strong></li>
+        ))}
+    </ul>
+    <p>{data.sections.support.note}</p>
+
+    <!-- ===== DISCLAIMER ===== -->
+    <h2><span class="highlight">Disclaimer</span></h2>
+    <div class="warning-box" style="border-left-color:#555;">
+        <p><strong>This information portal is NOT:</strong></p>
+        <ul style="margin:8px 0 0 20px;">
+            {data.disclaimer.portal.map(item => (
+                <li>{item}</li>
+            ))}
+        </ul>
+    </div>
+    <p><strong>We only provide:</strong></p>
+    <ul>
+        {data.disclaimer.provide.map(item => (
+            <li>{item}</li>
+        ))}
+    </ul>
+    <h3>Responsible Gambling</h3>
+    <p>{data.disclaimer.responsibleGambling}</p>
+    <h3>Full Disclaimer</h3>
+    <p>{data.disclaimer.fullDisclaimer}</p>
+    <p><strong>What we DO NOT do:</strong></p>
+    <ul>
+        {data.disclaimer.doNot.map(item => (
+            <li>{item}</li>
+        ))}
+    </ul>
+    <p>{data.disclaimer.copyright}</p>
+    <p style="font-size:14px; color:#666; margin-top:16px;">
+        <strong>EN:</strong> {data.disclaimer.en}
+    </p>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <p>© {data.footer.year} — {data.footer.text}. All rights reserved.</p>
+        <div class="footer-links">
+            {data.footer.links.map(link => (
+                <a href="#">{link}</a>
+            ))}
+        </div>
+        <p style="margin-top:10px; font-size:12px; color:#444;">
+            {data.footer.bottomText}
+        </p>
+    </footer>
+
+</BaseLayout>

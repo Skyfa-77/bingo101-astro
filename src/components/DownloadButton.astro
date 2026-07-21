@@ -1,0 +1,16 @@
+---
+// src/components/DownloadButton.astro
+
+export interface Props {
+    text: string;
+    full?: boolean;
+}
+
+const { text, full = false } = Astro.props;
+---
+
+<div style="text-align:center; margin:20px 0 16px;">
+    <a href="#" class={full ? 'btn-download' : 'btn-mirror'} id="downloadBtn" onclick="handleDownloadClick(); return false;">
+        {text}
+    </a>
+</div>

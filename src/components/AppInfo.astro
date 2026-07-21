@@ -1,0 +1,40 @@
+---
+// src/components/AppInfo.astro
+
+export interface Props {
+    rating: string;
+    size: string;
+    votes: string;
+    bonus: string;
+}
+
+const { rating, size, votes, bonus } = Astro.props;
+---
+
+<div class="app-info">
+    <div class="info-item">
+        <div class="info-stars">
+            <img src="/star.svg" alt="star" width="16" height="16" />
+            <span class="info-value">{rating}</span>
+        </div>
+        <span class="info-label">Rating</span>
+    </div>
+    <div class="info-item">
+        <div class="info-stars">
+            <img src="/cloud.svg" alt="size" width="16" height="16" />
+            <span class="info-value">{size}</span>
+        </div>
+        <span class="info-label">Size</span>
+    </div>
+    <div class="info-item">
+        <div class="info-stars">
+            <img src="/love.svg" alt="votes" width="16" height="16" />
+            <span class="info-value">{votes}</span>
+        </div>
+        <span class="info-label">Votes</span>
+    </div>
+    <div class="info-item">
+        <span class="info-value">{bonus}</span>
+        <span class="info-label">Bonus</span>
+    </div>
+</div>

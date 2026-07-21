@@ -1,0 +1,15 @@
+---
+// src/components/Bonuses.astro
+
+export interface Props {
+    welcome: string;
+    freeBets: string;
+    subtitle: string;
+}
+
+const { welcome, freeBets, subtitle } = Astro.props;
+---
+
+<div class="brand-name">{welcome}</div>
+<div class="brand-name">{freeBets}</div>
+<div class="brand-sub">{subtitle}</div>

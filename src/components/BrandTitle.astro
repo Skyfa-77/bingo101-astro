@@ -1,0 +1,13 @@
+---
+// src/components/BrandTitle.astro
+
+export interface Props {
+    name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<div class="brand-title">
+    {name}
+</div>
