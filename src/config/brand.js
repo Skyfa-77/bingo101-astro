@@ -10,9 +10,9 @@ export const brand = {
 
   seo: {
     title: "Bingo 101 — Game Download",
-    description: "Download Bingo 101 APK and get 50-500 signup bonus instantly. Play real bingo games, win money, earn rewards, and withdraw cash directly via UPI.",
+    description: " Bingo 101 - Game Download APK and get 50-500 signup bonus instantly. Play real bingo games, win money, earn rewards, and withdraw cash directly via UPI.",
     canonical: "https://#/",
-    ogImage: "/images/og-default.jpg",
+    ogImage: "/images/og.webp",
   },
 
   appInfo: {

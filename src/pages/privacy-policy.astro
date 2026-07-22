@@ -1,0 +1,66 @@
+---
+// src/pages/privacy-policy.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import brand from '../config/brand.js';
+import content from '../content/brand-text.json';
+
+const data = {
+    ...brand,
+    ...content,
+};
+---
+
+<BaseLayout seo={{
+    title: "Privacy Policy — Bingo 101",
+    description: "Read our Privacy Policy to understand how we collect, use, and protect your personal information.",
+    canonical: "https://bingo101-astro.hachimura77.workers.dev/privacy-policy",
+    ogImage: "/images/og-default.jpg",
+}} themeColor={data.pwa.themeColor}>
+
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p><em>Last updated: July 2026</em></p>
+
+        <h2>Information We Collect</h2>
+        <p>We collect information you provide directly, such as when you register, participate in surveys, or contact us. This may include your name, email address, phone number, and payment information.</p>
+
+        <h2>How We Use Your Information</h2>
+        <p>We use the information we collect to provide, maintain, and improve our services. This includes processing transactions, sending you technical notices and support messages, and communicating with you about products, services, and promotional offers.</p>
+
+        <h2>Sharing of Information</h2>
+        <p>We do not share your personal information with third parties except as necessary to provide our services, comply with the law, or protect our rights. We may share information with service providers who perform services on our behalf.</p>
+
+        <h2>Cookies</h2>
+        <p>We use cookies and similar tracking technologies to track activity on our service and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+
+        <h2>Security</h2>
+        <p>We take reasonable measures to help protect your personal information from loss, theft, misuse, and unauthorized access. However, no method of transmission over the Internet is 100% secure.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:privacy@bingo101.com">privacy@bingo101.com</a></p>
+    </div>
+
+    <style is:global>
+        .container h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+        .container h2 {
+            font-size: 24px;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+        }
+        .container p {
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+        .container a {
+            color: #44b357;
+        }
+    </style>
+</BaseLayout>

@@ -201,7 +201,12 @@ const data = {
         <p>© {data.footer.year} — {data.footer.text}. All rights reserved.</p>
         <div class="footer-links">
             {data.footer.links.map(link => (
-                <a href="#">{link}</a>
+                <a href={link}>{
+                         link === '/responsible-gambling' ? 'Play Responsibly' :
+                        link === '/privacy-policy' ? 'Privacy' :
+                        link === '/terms' ? 'Terms' :
+                        link
+                }</a>
             ))}
         </div>
         <p style="margin-top:10px; font-size:12px; color:#444;">

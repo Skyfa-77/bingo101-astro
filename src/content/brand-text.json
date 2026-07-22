@@ -41,13 +41,14 @@
     "payments": {
       "title": "Financial Operations",
       "depositMethods": [
-        "Electronic wallets (WebMoney, YooMoney, Payeer, ECO, etc.)",
+        "UPI Transfer",
+        "IMPS Bank Transfer",
         "Bank cards (Visa, Mastercard)",
         "Mobile operator payments",
         "Cryptocurrency operations (Bitcoin, other digital currencies)",
         "Bank transfers"
       ],
-      "withdrawal": "According to user reviews, withdrawal requests on Bingo 101 can take up to 72 hours to process. For the first withdrawal, identity verification is usually required.",
+      "withdrawal": "Instant Withdrawal",
       "note": "For current terms (fees, limits, processing times), visit the official Bingo 101 website."
     },
     "bonuses": {
@@ -90,11 +91,11 @@
     "mobile": {
       "title": "How many Mobile Solutions?",
       "items": [
-        "Android App: available for download from the official website",
-        "iOS App: for iPhone and iPad",
+        "Android App: available for download from the Bingo 101 website",
+        "iOS App: available download for iPhone and iPad",
         "Mobile Website: adaptive version for browsers"
       ],
-      "note": "For the official app, visit the Bingo 101 website. Downloading from unofficial sources may pose security risks. We do not distribute mobile apps."
+      "note": "Game Download for Android and iOS."
     },
     "support": {
       "title": "Support Service",
@@ -128,7 +129,7 @@
       "Do not accept bets on sports events",
       "Do not conduct financial operations",
       "Do not provide access to gambling games",
-      "Are not an App Download or representative",
+      "Available Game download",
       "Do not register users"
     ],
     "copyright": "All trademarks, logos and brands (including Bingo 101) belong to their respective owners and are used exclusively for informational and review purposes in accordance with fair use principles.",
@@ -138,7 +139,11 @@
   "footer": {
     "year": 2026,
     "text": "Bingo 101 Review",
-    "links": ["18+", "Play Responsibly", "Privacy", "Terms"],
+        "links": [
+        "/responsible-gambling",
+        "/privacy-policy",
+        "/terms"
+    ],
     "bottomText": "Not affiliated with Bingo 101. Independent informational resource."
   }
 }

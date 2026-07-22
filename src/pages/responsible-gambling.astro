@@ -1,0 +1,82 @@
+---
+// src/pages/responsible-gambling.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import brand from '../config/brand.js';
+import content from '../content/brand-text.json';
+
+const data = {
+    ...brand,
+    ...content,
+};
+---
+
+<BaseLayout seo={{
+    title: "Responsible Gambling — Bingo 101",
+    description: "Learn about responsible gambling practices and how to stay in control. We promote safe and enjoyable gaming.",
+    canonical: "https://bingo101-astro.hachimura77.workers.dev/responsible-gambling",
+    ogImage: "/images/og-default.jpg",
+}} themeColor={data.pwa.themeColor}>
+
+    <div class="container">
+        <h1>Responsible Gambling</h1>
+        <p><em>Last updated: July 2026</em></p>
+
+        <h2>Our Commitment</h2>
+        <p>We are committed to promoting responsible gambling and ensuring that our users have a safe and enjoyable experience. Gambling should be a form of entertainment, not a way to make money.</p>
+
+        <h2>Know the Risks</h2>
+        <p>Gambling can be addictive and may lead to financial loss. It is important to recognize the signs of problem gambling and to seek help if you feel you are losing control.</p>
+
+        <h2>Stay in Control</h2>
+        <ul>
+            <li><strong>Set a budget:</strong> Decide how much you can afford to lose before you start playing.</li>
+            <li><strong>Time limits:</strong> Set limits on how long you play and take regular breaks.</li>
+            <li><strong>Don't chase losses:</strong> Chasing losses can lead to bigger losses.</li>
+            <li><strong>Play for fun:</strong> Treat gambling as a form of entertainment, not a way to earn money.</li>
+        </ul>
+
+        <h2>Age Restrictions</h2>
+        <p>Our services are strictly for individuals aged 18 and over. We do not allow anyone under 18 to use our site or engage in gambling activities.</p>
+
+        <h2>Get Help</h2>
+        <p>If you or someone you know needs help with problem gambling, there are organizations that provide support:</p>
+        <ul>
+            <li><strong>Gambling Help Online:</strong> <a href="https://gamblinghelponline.org.au" target="_blank" rel="noopener noreferrer">gamblinghelponline.org.au</a></li>
+            <li><strong>GamCare:</strong> <a href="https://www.gamcare.org.uk" target="_blank" rel="noopener noreferrer">gamcare.org.uk</a></li>
+            <li><strong>BeGambleAware:</strong> <a href="https://www.begambleaware.org" target="_blank" rel="noopener noreferrer">begambleaware.org</a></li>
+        </ul>
+
+        <h2>Self-Exclusion</h2>
+        <p>We encourage users to consider self-exclusion if they feel they need a break from gambling. You can contact the official Bingo 101 support for more information on self-exclusion options.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, please contact us at: <a href="mailto:support@bingo101.com">support@bingo101.com</a></p>
+    </div>
+
+    <style is:global>
+        .container h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+        .container h2 {
+            font-size: 24px;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+        }
+        .container p, .container ul {
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+        .container ul {
+            padding-left: 24px;
+        }
+        .container li {
+            margin-bottom: 8px;
+        }
+        .container a {
+            color: #44b357;
+        }
+    </style>
+</BaseLayout>
