@@ -1,5 +1,5 @@
 // ===== BRAND CONFIGURATION =====
-const AFFILIATE_LINK = 'https://ваш-партнёрский-линк.com/offer';
+const AFFILIATE_LINK = 'https://1woala.life/casino/list?open=register&p=912z';
 const BRAND_NAME = 'Bingo 101';
 const BONUS_1 = '+100% Welcome Bonus';
 const BONUS_2 = '250 FREE BETS';
