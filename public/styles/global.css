@@ -86,7 +86,7 @@ ol li {
     margin-bottom: 6px;
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER (œ–Œ«–¿◊Õ€…) ===== */
 .site-header {
     position: fixed;
     top: 0;
@@ -112,7 +112,7 @@ ol li {
     gap: 12px;
 }
 
-/* ===== LOGIN ===== */
+/* =====  ÕŒœ ¿ LOGIN ó ◊®–Õ€… ‘ŒÕ + Œ¡¬Œƒ ¿ ===== */
 .btn-login {
     display: inline-block;
     padding: 8px 24px;
@@ -129,13 +129,14 @@ ol li {
     transition: all 0.3s ease;
     line-height: 1.4;
 }
+
 .btn-login:hover {
     background: #1a1a1a;
     transform: translateY(-2px);
     text-decoration: none !important;
 }
 
-/* ===== REGISTER ===== */
+/* =====  ÕŒœ ¿ REGISTER ó √–¿ƒ»≈Õ“ ===== */
 .btn-register {
     display: inline-block;
     padding: 8px 24px;
@@ -152,13 +153,14 @@ ol li {
     transition: all 0.3s ease;
     line-height: 1.4;
 }
+
 .btn-register:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(68, 179, 87, 0.4);
     text-decoration: none !important;
 }
 
-/* ===== LOGO ===== */
+/* ===== LOGO (”Ã≈Õ‹ÿ≈ÕÕ€…) ===== */
 .logo-wrapper {
     text-align: center;
     margin: 0 auto 16px auto;
@@ -170,7 +172,7 @@ ol li {
     margin: 0 auto;
 }
 
-/* ===== BRAND TITLE ===== */
+/* ===== BRAND TITLE (œŒƒ ÀŒ√Œ“»œŒÃ) ===== */
 .brand-title {
     font-size: 28px;
     font-weight: 900;
@@ -183,7 +185,7 @@ ol li {
     color: #44b357;
 }
 
-/* ===== APP INFO ===== */
+/* ===== APP INFO (œŒƒ ÀŒ√Œ“»œŒÃ) ===== */
 .app-info {
     display: flex;
     flex-wrap: wrap;
@@ -203,7 +205,7 @@ ol li {
 }
 .app-info .info-label {
     font-size: 9px;
-    color: #aaa;
+    color: #aaa; /* —‰ÂÎ‡Î Ò‚ÂÚÎÂÂ */
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -212,14 +214,6 @@ ol li {
     font-size: 18px;
     font-weight: 600;
     color: #fff;
-}
-.info-stars {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-.info-stars img {
-    display: inline-block;
 }
 
 /* ===== IMAGE PLACEHOLDER ===== */
@@ -256,7 +250,7 @@ ol li {
     color: #555;
 }
 
-/* ===== BUTTONS ===== */
+/* ===== ¡ŒÀ‹ÿ¿ﬂ  ÕŒœ ¿ ó ”À”◊ÿ≈ÕÕ¿ﬂ ===== */
 .btn-mirror {
     display: inline-block;
     background: linear-gradient(135deg, #44b357, #1f7a33);
@@ -275,6 +269,7 @@ ol li {
     box-shadow: 0 8px 30px rgba(68, 179, 87, 0.5);
     animation: pulse 2s infinite;
 }
+
 .btn-mirror:hover {
     background: linear-gradient(135deg, #5cd140, #2d8a1a);
     transform: translateY(-3px);
@@ -299,6 +294,7 @@ ol li {
     transition: all 0.3s ease;
     box-shadow: 0 8px 30px rgba(68, 179, 87, 0.5);
 }
+
 .btn-download:hover {
     background: linear-gradient(135deg, #5cd140, #2d8a1a);
     transform: translateY(-3px);
@@ -306,7 +302,7 @@ ol li {
     box-shadow: 0 12px 40px rgba(68, 179, 87, 0.7);
 }
 
-/* ===== PULSE ===== */
+/* ===== œ”À‹—¿÷»ﬂ ===== */
 @keyframes pulse {
     0% {
         box-shadow: 0 8px 30px rgba(68, 179, 87, 0.5);
@@ -322,9 +318,9 @@ ol li {
     }
 }
 
-/* ===== BOXES ===== */
+/* ===== WARNING / INFO BOXES ===== */
 .warning-box {
-    background: #0d1a0d;
+    background: #ecf2ff;
     border-left: 4px solid #44b357;
     padding: 16px 20px;
     margin: 20px 0;
@@ -333,11 +329,16 @@ ol li {
 .warning-box p {
     margin-bottom: 0;
     font-size: 14px;
-    color: #80b080;
+    color: #fefeff;
 }
 
+.warning-box strong,ul{
+       color: #fefeff;
+}
+
+/* ===== INFO BOX (Ò‚ÂÚÎ˚È ÙÓÌ Í‡Í Ì‡ ÒÍËÌÂ) ===== */
 .info-box {
-    background: #161616;
+    background: #fff2cf;
     border: 1px solid #2a2a2a;
     padding: 16px 20px;
     margin: 16px 0;
@@ -346,7 +347,10 @@ ol li {
 .info-box p {
     margin-bottom: 0;
     font-size: 14px;
-    color: #888;
+    color: #fbffff;
+}
+.info-box strong {
+    color: #fbffff;
 }
 
 /* ===== DIVIDER ===== */
@@ -374,10 +378,69 @@ ol li {
 .brand-box .brand-name .highlight {
     color: #44b357;
 }
+.brand-box .brand-tagline {
+    font-size: 18px;
+    color: #44b357;
+    font-weight: 700;
+    margin-top: 4px;
+}
 .brand-box .brand-sub {
     font-size: 14px;
     color: #888;
     margin-top: 6px;
+}
+
+/* ===== FEATURE HIGHLIGHT ===== */
+.feature-highlight {
+    background: #0d0d0d;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 16px 0;
+    text-align: center;
+}
+.feature-highlight .big-number {
+    font-size: 36px;
+    font-weight: 900;
+    color: #44b357;
+}
+.feature-highlight .big-label {
+    font-size: 14px;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== APP INFO BOTTOM ===== */
+.app-info-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 40px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 20px 0 10px 0;
+    border: 1px solid #2a2a2a;
+}
+.app-info-bottom .info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.app-info-bottom .info-label {
+    font-size: 9px;
+    color: #aaa; /* —‰ÂÎ‡Î Ò‚ÂÚÎÂÂ */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.app-info-bottom .info-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
 }
 
 /* ===== FOOTER ===== */
@@ -416,12 +479,24 @@ ol li {
     }
 
     .btn-login {
+        display: inline-block;
         padding: 8px 20px;
-        font-size: 26px;
         border-radius: 11px;
+        font-weight: 700;
+        font-size: 26px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #44b357;
+        background: #000000;
+        border: 2px solid #44b357;
+        cursor: pointer;
+        text-decoration: none !important;
+        transition: all 0.3s ease;
+        line-height: 1.4;
         box-shadow: 0 0 15px rgba(68, 179, 87, 0.5);
     }
     .btn-login:hover {
+        text-decoration: none !important;
         box-shadow: 0 0 30px rgba(68, 179, 87, 0.8), 0 0 60px rgba(68, 179, 87, 0.4);
         border-color: #5cd140;
     }
@@ -457,9 +532,24 @@ ol li {
     }
     .app-info .info-value {
         font-size: 16px;
+        font-weight: 600;
     }
     .app-info .info-label {
         font-size: 8px;
+        color: #aaa;
+    }
+
+    .app-info-bottom {
+        gap: 12px 20px;
+        padding: 12px 16px;
+    }
+    .app-info-bottom .info-value {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .app-info-bottom .info-label {
+        font-size: 8px;
+        color: #aaa;
     }
 
     .btn-mirror {
@@ -469,6 +559,9 @@ ol li {
         padding: 24px 20px;
         font-size: 16px;
         border-radius: 11px;
+        font-weight: 800;
+        box-shadow: 0 8px 40px rgba(68, 179, 87, 0.6);
+        letter-spacing: 2px;
         animation: pulse 2s infinite;
     }
 
@@ -479,6 +572,9 @@ ol li {
         padding: 24px 20px;
         font-size: 26px;
         border-radius: 50px;
+        font-weight: 800;
+        box-shadow: 0 8px 40px rgba(68, 179, 87, 0.6);
+        letter-spacing: 2px;
     }
 
     .brand-box .brand-name {
@@ -487,6 +583,11 @@ ol li {
     }
     .brand-box .brand-sub {
         font-size: 14px;
+        color: #888;
         margin-top: 6px;
+    }
+
+    .feature-highlight .big-number {
+        font-size: 28px;
     }
 }

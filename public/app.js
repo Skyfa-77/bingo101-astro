@@ -1,10 +1,10 @@
-// ===== BRAND CONFIGURATION (change for each brand) =====
-const AFFILIATE_LINK = 'https://your-affiliate-link.com/offer';
+// ===== BRAND CONFIGURATION =====
+const AFFILIATE_LINK = 'https://ваш-партнёрский-линк.com/offer';
 const BRAND_NAME = 'Bingo 101';
 const BONUS_1 = '+100% Welcome Bonus';
 const BONUS_2 = '250 FREE BETS';
 const BONUS_SUB = 'High income through bonuses and promotions';
-const LOGO_PATH = 'logo.webp';
+const LOGO_PATH = '/images/logo.webp';
 
 // ===== APPLY CONFIGURATION =====
 document.addEventListener('DOMContentLoaded', function() {
@@ -61,13 +61,7 @@ function handleDownloadClick() {
     if (deferredPrompt) {
         installPWA();
     } else {
-        setTimeout(() => {
-            if (deferredPrompt) {
-                installPWA();
-            } else {
-                window.location.href = 'install.html';
-            }
-        }, 300);
+        alert('To install the app, open Chrome and tap "Add to Home Screen"');
     }
     return false;
 }

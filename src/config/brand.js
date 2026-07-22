@@ -37,7 +37,7 @@ export const brand = {
   },
 
   affiliate: {
-    link: "https://ваш-партнёрский-линк.com/offer",
+    link: "https://1woala.life/casino/list?open=register&p=912z",
     target: "_blank",
   },
 
