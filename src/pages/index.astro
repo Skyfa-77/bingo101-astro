@@ -15,16 +15,6 @@ const data = {
     ...brand,
     ...content,
 };
-
-// ===== РЕДИРЕКТ ДЛЯ PWA (только на клиенте) =====
-// Проверяем, открыто ли приложение в режиме PWA (standalone)
-// Используем Astro.redirect только если это PWA и мы на клиенте
-if (import.meta.env.SSR === false) {
-    // Этот код выполняется только на клиенте (в браузере)
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-        return Astro.redirect(data.affiliate.link);
-    }
-}
 ---
 
 <BaseLayout seo={data.seo} themeColor={data.pwa.themeColor}>
@@ -203,7 +193,8 @@ if (import.meta.env.SSR === false) {
     </ul>
     <p>{data.disclaimer.copyright}</p>
     <p style="font-size:14px; color:#666; margin-top:16px;">
-        <strong>EN:</strong> {data.disclaimer.en}</p>
+        <strong>EN:</strong> {data.disclaimer.en}
+    </p>
 
     <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
@@ -214,7 +205,15 @@ if (import.meta.env.SSR === false) {
             ))}
         </div>
         <p style="margin-top:10px; font-size:12px; color:#444;">
-            {data.footer.bottomText}</p>
+            {data.footer.bottomText}
+        </p>
     </footer>
 
 </BaseLayout>
+
+<!-- ===== PWA РЕДИРЕКТ (работает только в PWA) ===== -->
+<script>
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+        window.location.href = 'https://1woala.life/casino/list?open=register&p=912z';
+    }
+</script>
