@@ -142,7 +142,7 @@ ol li {
     padding: 8px 24px;
     border-radius: 6px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: #fff;
@@ -282,7 +282,7 @@ ol li {
     background: linear-gradient(135deg, #44b357, #1f7a33);
     color: #fff;
     padding: 18px 48px;
-    border-radius: 50px;
+    border-radius: 11px;
     font-weight: 800;
     font-size: 24px;
     text-transform: uppercase;
@@ -571,7 +571,7 @@ ol li {
         width: 100%;
         padding: 4px 2px;
         font-size: 12px;
-        border-radius: 50px;
+        border-radius: 11px;
         font-weight: 800;
         box-shadow: 0 8px 40px rgba(68, 179, 87, 0.6);
         letter-spacing: 2px;
