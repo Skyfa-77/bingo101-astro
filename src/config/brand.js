@@ -9,8 +9,8 @@ export const brand = {
   },
 
   seo: {
-    title: "Bingo 101 — Game Download",
-    description: " Bingo 101 - Game Download APK and get 100% signup bonus instantly. Play real bingo games, win money, earn rewards, and withdraw cash directly via UPI.",
+    title: "Bingo 101 — Game Download and Get up to ₹100 Welcome Bonus",
+    description: "Bingo 101 Welcomes you! Play Slots, Rummy, Teen Patti, Aviator, Jetx and many more. Start winning money, earn rewards, and instant withdraw cash today!",
     canonical: "https://bingo101-games.com",
     ogImage: "/images/gr4.webp",
   },
@@ -19,11 +19,11 @@ export const brand = {
     rating: "4.8",
     size: "3.4 MB",
     votes: "193K",
-    bonus: "100%",
+    bonus: "₹100",
   },
 
   bonuses: {
-    welcome: "+100% Welcome Bonus",
+    welcome: "₹100 Welcome Bonus",
     freeBets: "250 FREE BETS",
     subtitle: "High income through bonuses and promotions",
   },

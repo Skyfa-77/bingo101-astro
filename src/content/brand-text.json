@@ -1,7 +1,13 @@
 {
-  "hero": {
+"hero": {
     "title": "How to start playing Bingo 101?",
-    "text": "Every day, thousands of people visit our website of one of the most famous bookmakers on the planet — welcome to Bingo 101, always available for those who love to place profitable bets! You can play such games as: Aviator, JetX, Lucky Birds, Chicken Train, Chicken Crash Slots: 777 Slots, Sweet Bonanza, Gates of Olympus, Wolf Gold, Starburst, Book of Dead. Card Games: Teen Patti, Andar Bahar, 7 Up Down, Rummy, Poker, Blackjack. Casino Games: Roulette, Baccarat, Monopoly Live, Deal or No Deal, Plinko, Dice, Wheel of Fortune. Bingo Games: Bingo 101, Bingo Blitz, Bingo Royale, and many more!"
+    "text": [
+      "Every day, thousands of people visit our website, its one of the most famous bookmakers in India — welcome to Bingo 101, always available for those who love to place profitable bets!",
+      "You can play such games as: Aviator, JetX, Rummy, Teen Patti, Chicken Road.",
+      "Slots: 777 Slots, Sweet Bonanza, Gates of Olympus, Wolf Gold, Starburst, Book of Dead.",
+      "Card Games: Andar Bahar, Poker, Blackjack.",
+      "Casino Games: Roulette, Baccarat, Plinko, Dice, Wheel of Fortune."
+    ]
   },
 
   "sections": {

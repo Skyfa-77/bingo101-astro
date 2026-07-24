@@ -46,8 +46,10 @@ const data = {
 
     <!-- ===== HERO ===== -->
     <div class="hero">
-        <h1 class="hero-title">{data.hero.title}</h1>
-        <p>{data.hero.text}</p>
+     <h1 class="hero-title">{data.hero.title}</h1>
+     {data.hero.text.map(paragraph => (
+        <p>{paragraph}</p>
+        ))}
     </div>
 
     <!-- ===== IMAGE PLACEHOLDER ===== -->
