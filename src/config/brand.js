@@ -5,7 +5,7 @@ export const brand = {
     name: "Bingo 101",
     slug: "bingo101",
     logo: "/images/logo.webp",
-    favicon: "/icons/icon-192.png",
+    favicon: "/favicon.ico",
   },
 
   seo: {
