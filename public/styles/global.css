@@ -591,3 +591,11 @@ ol li {
         font-size: 28px;
     }
 }
+/* ===== HERO TITLE ===== */
+.hero h1 {
+    font-size: 22px;  /* такой же, как у h2 */
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    border-bottom: none;
+}

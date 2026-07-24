@@ -45,6 +45,87 @@ const {
     <meta property="og:image" content={ogImage} />
     <meta property="og:type" content="website" />
     {canonical && <meta property="og:url" content={canonical} />}
+
+    <!-- ===== Schema.org ===== -->
+    <script type="application/ld+json" set:html>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bingo101-games.com/#organization",
+      "name": "Bingo 101 Review",
+      "url": "https://bingo101-games.com",
+      "description": "Independent review site for Bingo 101 app. Download APK, get bonuses, and play real cash games.",
+      "logo": "https://bingo101-games.com/images/logo.webp"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://bingo101-games.com/#localbusiness",
+      "name": "Bingo 101",
+      "description": "Online casino and betting platform for Indian players.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "193"
+      }
+    },
+    {
+      "@type": "Casino",
+      "@id": "https://bingo101-games.com/#casino",
+      "name": "Bingo 101",
+      "url": "https://bingo101-games.com",
+      "description": "Bingo 101 is a leading online casino in India offering slots, bingo, and sports betting.",
+      "parentOrganization": { "@id": "https://bingo101-games.com/#organization" }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://bingo101-games.com/#article",
+      "headline": "Bingo 101 Review — Download App & Get Bonus",
+      "description": "Full review of Bingo 101 app. Learn how to register, deposit, play, and withdraw winnings.",
+      "author": {
+        "@type": "Organization",
+        "name": "Bingo 101 Review"
+      },
+      "publisher": { "@id": "https://bingo101-games.com/#organization" },
+      "datePublished": "2026-07-24",
+      "dateModified": "2026-07-24"
+    },
+    {
+      "@type": "Event",
+      "@id": "https://bingo101-games.com/#event",
+      "name": "Bingo 101 Promotions",
+      "description": "Current promotions and bonus offers for Indian players.",
+      "startDate": "2026-07-24",
+      "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        }
+      }
+    },
+    {
+      "@type": "SportEvent",
+      "@id": "https://bingo101-games.com/#sportevent",
+      "name": "Cricket Betting",
+      "description": "Bet on IPL, Test matches, and international cricket with Bingo 101.",
+      "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        }
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
     <div class="container">

@@ -45,7 +45,10 @@ const data = {
     <hr class="section-divider" />
 
     <!-- ===== HERO ===== -->
-    <h2>{data.hero.title}</h2>
+    <div class="hero">
+        <h1 class="hero-title">{data.hero.title}</h1>
+        <p>{data.hero.text}</p>
+    </div>
     <p>{data.hero.text}</p>
 
     <!-- ===== IMAGE PLACEHOLDER ===== -->
@@ -198,7 +201,7 @@ const data = {
 
     <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
-        <p>© {data.footer.year} — {data.footer.text}. All rights reserved.</p>
+        <p>© {data.footer.year} - {data.footer.text}. All rights reserved.</p>
         <div class="footer-links">
             {data.footer.links.map(link => (
                 <a href={link}>{
