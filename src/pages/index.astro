@@ -49,7 +49,6 @@ const data = {
         <h1 class="hero-title">{data.hero.title}</h1>
         <p>{data.hero.text}</p>
     </div>
-    <p>{data.hero.text}</p>
 
     <!-- ===== IMAGE PLACEHOLDER ===== -->
     <div class="img-placeholder">
@@ -61,7 +60,6 @@ const data = {
 
     <!-- ===== SECTION 1: REGISTRATION ===== -->
     <h2>{data.sections.registration.title}</h2>
-    <p>{data.sections.registration.intro}</p>
     <ul>
         {data.sections.registration.steps.map(step => (
             <li><strong>{step}</strong></li>
@@ -71,12 +69,8 @@ const data = {
         <p><strong>Important:</strong> {data.sections.registration.important}</p>
     </div>
 
-    <!-- ===== EXTRA DOWNLOAD BUTTON ===== -->
-    <BrandBox buttons={data.buttons} bonuses={data.bonuses} />
-
     <!-- ===== SECTION 2: ADVANTAGES ===== -->
     <h2>{data.sections.advantages.title}</h2>
-    <p>{data.sections.advantages.intro}</p>
     <ul>
         {data.sections.advantages.items.map(item => (
             <li><strong>{item}</strong></li>
@@ -95,9 +89,6 @@ const data = {
     <div class="warning-box">
         <p><strong>Important:</strong> {data.sections.license.important}</p>
     </div>
-
-    <!-- ===== EXTRA DOWNLOAD BUTTON ===== -->
-    <BrandBox buttons={data.buttons} bonuses={data.bonuses} />
 
     <!-- ===== SECTION 4: PAYMENTS ===== -->
     <h2>{data.sections.payments.title}</h2>
@@ -125,9 +116,6 @@ const data = {
         <p>{data.sections.bonuses.note}</p>
     </div>
 
-    <!-- ===== EXTRA DOWNLOAD BUTTON ===== -->
-    <BrandBox buttons={data.buttons} bonuses={data.bonuses} />
-
     <!-- ===== SECTION 6: SPORTS ===== -->
     <h2>{data.sections.sports.title}</h2>
     <p>According to various reviews, Bingo 101 offers betting on a wide range of sports disciplines:</p>
@@ -154,9 +142,6 @@ const data = {
     <div class="info-box">
         <p>{data.sections.mobile.note}</p>
     </div>
-
-    <!-- ===== EXTRA DOWNLOAD BUTTON ===== -->
-    <BrandBox buttons={data.buttons} bonuses={data.bonuses} />
 
     <!-- ===== SECTION 8: SUPPORT ===== -->
     <h2>{data.sections.support.title}</h2>

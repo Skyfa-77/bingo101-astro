@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "How to start playing Bingo 101?",
-    "text": "Every day, thousands of people visit the mirror of the official website of one of the most famous bookmakers on the planet — welcome to Bingo 101, always available for those who love to place profitable bets!"
+    "text": "Every day, thousands of people visit our website of one of the most famous bookmakers on the planet — welcome to Bingo 101, always available for those who love to place profitable bets! You can play such games as: Aviator, JetX, Lucky Birds, Chicken Train, Chicken Crash Slots: 777 Slots, Sweet Bonanza, Gates of Olympus, Wolf Gold, Starburst, Book of Dead. Card Games: Teen Patti, Andar Bahar, 7 Up Down, Rummy, Poker, Blackjack. Casino Games: Roulette, Baccarat, Monopoly Live, Deal or No Deal, Plinko, Dice, Wheel of Fortune. Bingo Games: Bingo 101, Bingo Blitz, Bingo Royale, and many more!"
   },
 
   "sections": {
@@ -139,11 +139,11 @@
   "footer": {
     "year": 2026,
     "text": "bingo101-games.com Information portal about gambling and betting",
-        "links": [
-        "/responsible-gambling",
-        "/privacy-policy",
-        "/terms"
+    "links": [
+      "/responsible-gambling",
+      "/privacy-policy",
+      "/terms"
     ],
-    "bottomText": "Not affiliated with Bingo 101. Independent informational resource."
+    "bottomText": "Not affiliated with Bingo101. Independent informational resource."
   }
 }
