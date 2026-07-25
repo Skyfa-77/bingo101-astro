@@ -39,13 +39,6 @@ seo: {
       de: "...",
     },
   },
-
-  // ===== БРЕНД =====
-  brand: {
-    name: "Bingo 101",
-    slug: "bingo101",
-    logo: "/images/logo.webp",
-  },
 };
 
 export default monobrandConfig;
