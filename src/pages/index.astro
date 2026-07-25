@@ -7,6 +7,7 @@ import Logo from '../components/Logo.astro';
 import BrandTitle from '../components/BrandTitle.astro';
 import AppInfo from '../components/AppInfo.astro';
 import BrandBox from '../components/BrandBox.astro';
+import DownloadButton from '../components/DownloadButton.astro';
 
 import brand from '../config/brand.js';
 import content from '../content/brand-text.json';
@@ -60,6 +61,11 @@ const data = {
         <span class="label">Illustration for informational purposes only</span>
     </div>
 
+    <!-- ===== КНОПКА ===== -->
+    <div style="text-align:center; margin:30px 0;">
+        <DownloadButton text={data.buttons.downloadFull || data.buttons.download} full={true} />
+    </div>
+
     <!-- ===== SECTION 1: REGISTRATION ===== -->
     <h2>{data.sections.registration.title}</h2>
     <ul>
@@ -78,6 +84,11 @@ const data = {
             <li><strong>{item}</strong></li>
         ))}
     </ul>
+
+        <!-- ===== КНОПКА ===== -->
+    <div style="text-align:center; margin:30px 0;">
+        <DownloadButton text={data.buttons.downloadFull || data.buttons.download} full={true} />
+    </div>
 
     <!-- ===== SECTION 3: LICENSE ===== -->
     <h2>{data.sections.license.title}</h2>
@@ -104,6 +115,11 @@ const data = {
     <p>{data.sections.payments.withdrawal}</p>
     <div class="info-box">
         <p><strong>Note:</strong> {data.sections.payments.note}</p>
+    </div>
+
+        <!-- ===== КНОПКА ===== -->
+    <div style="text-align:center; margin:30px 0;">
+        <DownloadButton text={data.buttons.downloadFull || data.buttons.download} full={true} />
     </div>
 
     <!-- ===== SECTION 5: BONUSES ===== -->
@@ -133,6 +149,11 @@ const data = {
         ))}
     </ul>
 
+        <!-- ===== КНОПКА ===== -->
+    <div style="text-align:center; margin:30px 0;">
+        <DownloadButton text={data.buttons.downloadFull || data.buttons.download} full={true} />
+    </div>
+
     <!-- ===== SECTION 7: MOBILE ===== -->
     <h2>{data.sections.mobile.title}</h2>
     <p>According to open sources, Bingo 101 offers mobile solutions for different operating systems:</p>
@@ -154,6 +175,11 @@ const data = {
         ))}
     </ul>
     <p>{data.sections.support.note}</p>
+
+        <!-- ===== КНОПКА ===== -->
+    <div style="text-align:center; margin:30px 0;">
+        <DownloadButton text={data.buttons.downloadFull || data.buttons.download} full={true} />
+    </div>
 
     <!-- ===== DISCLAIMER ===== -->
     <h2>{data.disclaimer.title}</h2>

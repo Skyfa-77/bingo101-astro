@@ -1,7 +1,7 @@
 // ===== BRAND CONFIGURATION =====
 const AFFILIATE_LINK = 'https://1woala.life/casino/list?open=register&p=912z';
 const BRAND_NAME = 'Bingo 101';
-const BONUS_1 = '+100% Welcome Bonus';
+const BONUS_1 = '₹100% Welcome Bonus';
 const BONUS_2 = '250 FREE BETS';
 const BONUS_SUB = 'High income through bonuses and promotions';
 const LOGO_PATH = '/images/logo.webp';
@@ -65,3 +65,4 @@ function handleDownloadClick() {
     }
     return false;
 }
+window.handleDownloadClick = handleDownloadClick;
