@@ -19,7 +19,7 @@ export const PAGES = [
 
 export const PWA = {
   icons: [
-    { src: '/icons/logo.webp', sizes: '512x512', type: 'image/webp', purpose: 'any maskable' },
+    { src: '/logo.webp', sizes: '512x512', type: 'image/webp', purpose: 'any maskable' },
   ],
   cache: {
     urls: [
