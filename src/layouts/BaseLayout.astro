@@ -1,5 +1,6 @@
 ---
 // src/layouts/BaseLayout.astro
+import { SITE } from '../config/site.config';
 
 export interface Props {
     title?: string;
@@ -37,7 +38,15 @@ const {
     <link rel="stylesheet" href="/styles/global.css" />
 
     <!-- ===== СКРИПТЫ ===== -->
-    <script src="/app.js" is:inline></script>
+    <!-- App Script -->
+    <script src="/app.js" defer></script>
+
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
 
     <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:title" content={title} />

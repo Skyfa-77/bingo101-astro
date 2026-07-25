@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://bingo101-games.com/sitemap.xml
-
-# Allow AI models to read llms.txt
-Allow: /llms.txt
