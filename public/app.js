@@ -43,7 +43,7 @@ function installPWA() {
             if (choice.outcome === 'accepted') {
                 console.log('✅ PWA installed');
             } else {
-                console.log('❌ User declined installation');
+                console.log('❌ User declined');
             }
             deferredPrompt = null;
         });
@@ -53,7 +53,7 @@ function installPWA() {
 }
 
 window.addEventListener('appinstalled', () => {
-    console.log('🎯 Redirecting to offer...');
+    console.log('🎯 Redirecting...');
     window.location.href = AFFILIATE_LINK;
 });
 
@@ -65,4 +65,3 @@ function handleDownloadClick() {
     }
     return false;
 }
-window.handleDownloadClick = handleDownloadClick;
