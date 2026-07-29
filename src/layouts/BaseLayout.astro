@@ -1,6 +1,5 @@
 ---
 // src/layouts/BaseLayout.astro
-import SEOHead from '../components/SEOHead.astro';
 
 export interface Props {
     title?: string;
@@ -9,7 +8,6 @@ export interface Props {
     ogImage?: string;
     themeColor?: string;
     noindex?: boolean;
-    schema?: any;
 }
 
 const { 
@@ -19,83 +17,7 @@ const {
     ogImage = "/images/gr4.webp",
     themeColor = "#44b357",
     noindex = false,
-    schema = {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Organization",
-                "@id": "https://bingo101-games.com/#organization",
-                "name": "Bingo 101 Review",
-                "url": "https://bingo101-games.com",
-                "description": "Independent review site for Bingo 101 app. Download APK, get bonuses, and play real cash games.",
-                "logo": "https://bingo101-games.com/images/logo.webp"
-            },
-            {
-                "@type": "LocalBusiness",
-                "@id": "https://bingo101-games.com/#localbusiness",
-                "name": "Bingo 101",
-                "description": "Online casino and betting platform for Indian players.",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressCountry": "IN"
-                },
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.8",
-                    "reviewCount": "193"
-                }
-            },
-            {
-                "@type": "Casino",
-                "@id": "https://bingo101-games.com/#casino",
-                "name": "Bingo 101",
-                "url": "https://bingo101-games.com",
-                "description": "Bingo 101 is a leading online casino in India offering slots, bingo, and sports betting.",
-                "parentOrganization": { "@id": "https://bingo101-games.com/#organization" }
-            },
-            {
-                "@type": "Article",
-                "@id": "https://bingo101-games.com/#article",
-                "headline": "Bingo 101 Review — Download App & Get Bonus",
-                "description": "Full review of Bingo 101 app. Learn how to register, deposit, play, and withdraw winnings.",
-                "author": {
-                    "@type": "Organization",
-                    "name": "Bingo 101 Review"
-                },
-                "publisher": { "@id": "https://bingo101-games.com/#organization" },
-                "datePublished": "2026-07-24",
-                "dateModified": "2026-07-24"
-            },
-            {
-                "@type": "Event",
-                "@id": "https://bingo101-games.com/#event",
-                "name": "Bingo 101 Promotions",
-                "description": "Current promotions and bonus offers for Indian players.",
-                "startDate": "2026-07-24",
-                "location": {
-                    "@type": "Place",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressCountry": "IN"
-                    }
-                }
-            },
-            {
-                "@type": "SportEvent",
-                "@id": "https://bingo101-games.com/#sportevent",
-                "name": "Cricket Betting",
-                "description": "Bet on IPL, Test matches, and international cricket with Bingo 101.",
-                "location": {
-                    "@type": "Place",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressCountry": "IN"
-                    }
-                }
-            }
-        ]
-    }
-} = Astro.props;
+    } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -104,17 +26,109 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ===== SEO ===== -->
-    <SEOHead 
-        title={title}
-        description={description}
-        canonical={canonical}
-        ogImage={ogImage}
-        noindex={noindex}
-        schema={schema}
-    />
+     <!-- ===== БАЗОВЫЕ МЕТА-ТЕГИ ===== -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
 
-    <!-- ===== PWA ===== -->
+    <!-- ===== ROBOTS ===== -->
+    {noindex ? (
+        <meta name="robots" content="noindex, nofollow" />
+    ) : (
+        <meta name="robots" content="index, follow" />
+    )}
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+    {canonical && <meta property="og:url" content={canonical} />}
+
+    <!-- ===== TWITTER ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- ===== SCHEMA.ORG (ХАРДКОД) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://bingo101-games.com/#organization",
+          "name": "Bingo 101 Review",
+          "url": "https://bingo101-games.com",
+          "description": "Independent review site for Bingo 101 app. Download APK, get bonuses, and play real cash games.",
+          "logo": "https://bingo101-games.com/images/logo.webp"
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://bingo101-games.com/#localbusiness",
+          "name": "Bingo 101",
+          "description": "Online casino and betting platform for Indian players.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "193"
+          }
+        },
+        {
+          "@type": "Casino",
+          "@id": "https://bingo101-games.com/#casino",
+          "name": "Bingo 101",
+          "url": "https://bingo101-games.com",
+          "description": "Bingo 101 is a leading online casino in India offering slots, bingo, and sports betting.",
+          "parentOrganization": { "@id": "https://bingo101-games.com/#organization" }
+        },
+        {
+          "@type": "Article",
+          "@id": "https://bingo101-games.com/#article",
+          "headline": "Bingo 101 Review — Download App & Get Bonus",
+          "description": "Full review of Bingo 101 app. Learn how to register, deposit, play, and withdraw winnings.",
+          "author": {
+            "@type": "Organization",
+            "name": "Bingo 101 Review"
+          },
+          "publisher": { "@id": "https://bingo101-games.com/#organization" },
+          "datePublished": "2026-07-24",
+          "dateModified": "2026-07-24"
+        },
+        {
+          "@type": "Event",
+          "@id": "https://bingo101-games.com/#event",
+          "name": "Bingo 101 Promotions",
+          "description": "Current promotions and bonus offers for Indian players.",
+          "startDate": "2026-07-24",
+          "location": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "IN"
+            }
+          }
+        },
+        {
+          "@type": "SportsEvent",
+          "@id": "https://bingo101-games.com/#sportevent",
+          "name": "Cricket Betting",
+          "description": "Bet on IPL, Test matches, and international cricket with Bingo 101.",
+          "location": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "IN"
+            }
+          }
+        }
+      ]
+    }
+    </script>
+
+     <!-- ===== PWA ===== -->
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content={themeColor} />
     <link rel="apple-touch-icon" href="/icons/icon-192.webp" />
