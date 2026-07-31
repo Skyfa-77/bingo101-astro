@@ -1,9 +1,9 @@
 import type { APIRoute } from 'astro';
-import { PWA, SITE } from '../config/site.config';
+import { PWA } from '../config/site.config';
 
 export const GET: APIRoute = () => {
   const cacheName = `bingo101-${PWA.cache.version}`;
-  const urlsToCache = PWA.cache.urls.map(url => `${SITE.url}${url}`);
+  const urlsToCache = PWA.cache.urls;   // ← убрал SITE.url
 
   const swCode = `
     const CACHE_NAME = '${cacheName}';
